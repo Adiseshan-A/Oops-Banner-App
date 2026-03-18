@@ -1,18 +1,24 @@
 public class OOPSBannerApp {
-    public static void main(String[] args) {
 
-        String[] lines = {
-            " *****   *****   ******   ***** ",
-            " **  **  **  **  **  **  **     ",
-            " **  **  **  **  **  **  **     ",
-            " **  **  **  **  ******   ***** ",
-            " **  **  **  **  **          ** ",
-            " **  **  **  **  **          ** ",
-            " *****   *****   **       ***** "
+    static void printBanner() {
+
+        String[] banner = {
+            " *****     *****     ******    ***** ",
+            "*     *   *     *    *     *  *     *",
+            "*     *   *     *    *     *  *",
+            "*     *   *     *    ******    *****",
+            "*     *   *     *    *              *",
+            "*     *   *     *    *        *     *",
+            " *****     *****     *         ***** "
         };
 
-        for (String line : lines) {
+        for (String line : banner) {
             System.out.println(line);
         }
     }
+
+    public static void main(String[] args) {
+        printBanner();
+    }
+
 }
