@@ -1,24 +1,51 @@
+import java.util.HashMap;
+
 public class OOPSBannerApp {
 
-    static void printBanner() {
+    static class CharacterPatternMap {
 
-        String[] banner = {
-            " *****     *****     ******    ***** ",
-            "*     *   *     *    *     *  *     *",
-            "*     *   *     *    *     *  *",
-            "*     *   *     *    ******    *****",
-            "*     *   *     *    *              *",
-            "*     *   *     *    *        *     *",
-            " *****     *****     *         ***** "
-        };
+        static HashMap<Character, String[]> map = new HashMap<>();
 
-        for (String line : banner) {
-            System.out.println(line);
+        static {
+            map.put('O', new String[]{
+                " *** ",
+                "*   *",
+                "*   *",
+                "*   *",
+                " *** "
+            });
+
+            map.put('P', new String[]{
+                "**** ",
+                "*   *",
+                "**** ",
+                "*    ",
+                "*    "
+            });
+
+            map.put('S', new String[]{
+                " ****",
+                "*    ",
+                " *** ",
+                "    *",
+                "**** "
+            });
         }
     }
 
     public static void main(String[] args) {
-        printBanner();
+
+        String word = "OOPS";
+
+        for (int i = 0; i < 5; i++) {
+
+            for (char c : word.toCharArray()) {
+                System.out.print(CharacterPatternMap.map.get(c)[i] + "  ");
+            }
+
+            System.out.println();
+        }
+
     }
 
 }
